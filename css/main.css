@@ -1,0 +1,259 @@
+html,body{
+ margin:0px;
+ padding:0px;
+ box-sizing:border-box;
+}
+
+.main-wallpaper{
+  margin: 0px;
+  padding:0px;
+  width: 100%;
+}
+/*
+.overlay{
+
+  display: block;
+  width: 100%;
+  min-height: 903px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+
+} */
+nav{
+
+  width: 100%;
+
+}
+
+.large-menu{
+   position: relative;
+    z-index: 3;
+    float:right;
+    margin-right: 20px;
+    list-style-type: none;
+    top:-90px;
+}
+
+.large-menu a{
+  color:#fff;
+  text-decoration: none;
+  font-family: 'Comfortaa', cursive;
+}
+
+.large-menu li{
+  display: inline;
+  padding-left:50px;
+  padding-right:50px;
+  padding-bottom: 20px;
+  font-size: 1.7rem;
+  color:#fff;
+
+}
+
+.main-page-title{
+
+   margin-left:90px;
+   margin-top:60px;
+   font-weight: bold;
+   font-size: 2.3rem;
+   font-family: 'Montserrat', sans-serif;
+   color:#fff;
+}
+
+.main-nav{
+  position: absolute;
+  top:10px;
+
+}
+
+.wallpaper-img{
+
+  width: 100%;
+  margin: 0px;
+  padding:0px;
+}
+
+/*
+  de mentionat
+  ca aicea punem pozitia relative
+  pentru ca dupa ne trebuie sa punem un element cu before
+  si faza este ca acel element va fi pus random pe pagina daca nu setam
+  ca si pozitionare a elementului anterior position absolute
+*/
+
+.menu-item{
+  display: inline-block;
+  position: relative;
+}
+
+.menu-item::before{
+  content:'';
+  position:absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0px;
+  left:0;
+  background-color: white;
+  transform-origin: bottom-right;
+  transition: transform 0.25s ease-out;
+}
+
+.menu-item:hover:before{
+  transform: scaleX(1);
+  transform-origin: bottom-left;
+}
+
+.small-menu-icon-container{
+  display: inline-block;
+  cursor: pointer;
+  float:right;
+  display: none;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+main{
+  width: 80%;
+  margin: auto;
+}
+
+.intro-box{
+  margin-top: 90px;
+  position: relative;
+}
+
+.box-1{
+  position: relative;
+}
+
+.box-1-img{
+  position: relative;
+  z-index: -200;
+   width: 60%;
+}
+
+.box-1-text-card{
+  width: 40%;
+  border:1px;
+  -webkit-box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.75);
+ padding:25px;
+ padding-bottom: 30px;
+ border-radius:5px;
+ margin-top:-200px;
+ margin-left:40%;
+ background-color: #fff;
+}
+
+.box-title{
+  font-size: 2.4rem;
+  font-family: 'Varela', sans-serif;
+}
+
+.box-main-text{
+  font-family: 'Brygada 1918', serif;
+  font-style: italic;
+}
+
+.box-end-text{
+  font-size:1.7rem;
+}
+
+.recipes-presentation{
+ margin-top:300px;
+}
+
+.recipe-type{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-family: 'Varela', sans-serif;
+  font-style: italic;
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card{
+  margin-top: 30px;
+  width: 300px;
+  height: 300px;
+}
+
+.card-img{
+  margin-top:20px;
+  width: 300px;
+  height: 300px;
+  margin-left: 10px;
+  object-fit: cover;
+}
+
+.more-btn{
+  margin-top:30px;
+  float:right;
+  padding:15px;
+  font-size: 1.4rem;
+  border: none;
+  color:#fff;
+  background-color: #000;
+  border-radius: 4px;
+  font-family: 'Varela', sans-serif;
+  cursor: pointer;
+}
+
+.more-btn:hover{
+  background-color: #fff;
+  color:#000;
+  border:1px solid black;
+}
+
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top:150px;
+  width: 100%;
+  background-color: #000;
+  height: 100px;
+}
+
+.footer-logo{
+  padding-top:50px;
+  height: 30px;
+}
+
+@media only screen and (max-width:1250px)
+{
+    .large-menu{
+      display: none;
+    }
+
+    .small-menu-icon-container{
+        display:block;
+        margin-right:50px;
+        margin-top:-84px;
+    }
+}
